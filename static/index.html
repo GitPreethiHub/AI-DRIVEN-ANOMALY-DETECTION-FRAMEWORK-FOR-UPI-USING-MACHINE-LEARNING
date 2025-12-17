@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>UPI Fraud Detection</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>UPI Fraud Detection</h1>
+    <p class="subtitle">Real-time transaction risk analysis</p>
+
+    <form id="fraudForm">
+      <div class="grid">
+        <input type="datetime-local" id="trans_datetime" required />
+        <input type="number" id="category" placeholder="Category Code" required />
+        <input type="date" id="dob" required />
+        <input type="number" id="trans_amount" placeholder="Transaction Amount" required />
+        <input type="number" id="state" placeholder="State Code" required />
+        <input type="number" id="zip" placeholder="ZIP Code" required />
+      </div>
+
+      <button type="submit">Check Transaction</button>
+    </form>
+
+    <div id="resultBox" class="hidden">
+      <h2 id="resultText"></h2>
+      <p><strong>Risk Level:</strong> <span id="riskLevel"></span></p>
+      <p><strong>Fraud Probability:</strong> <span id="fraudProb"></span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
